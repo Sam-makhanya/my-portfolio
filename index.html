@@ -28,6 +28,27 @@
   .btn { background:#FFC300; color:#1B2A49; padding:12px 25px; font-weight:600; border-radius:5px; display:inline-block; transition:0.3s; }
   .btn:hover { background:#e6b200; }
 
+  /* Responsive Cellphone Fixes */
+  @media (max-width: 768px) {
+    header { flex-direction: column; padding: 15px 20px; text-align: center; }
+    header nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    header nav a { margin-left: 0; font-size: 14px; }
+    
+    .hero { flex-direction: column-reverse; padding: 40px 20px; text-align: center; }
+    .hero-text { padding-right: 0; margin-top: 30px; }
+    .hero-text h1 { font-size: 36px; }
+    .hero-text p { font-size: 18px; }
+    .hero img { width: 250px; height: 250px; }
+
+    section { padding: 50px 20px; }
+    
+    /* Timeline Mobile Adjustment */
+    .timeline::after { left: 31px; }
+    .timeline-entry { width: 100%; padding-left: 70px; padding-right: 20px; text-align: left !important; }
+    .timeline-entry.right { left: 0; }
+    .timeline-entry::after { left: 21px; right: auto; }
+  }
+
   /* Sections */
   section { padding:80px 50px; }
   h2 { font-size:36px; margin-bottom:40px; text-align:center; color:#FFC300; }
@@ -82,11 +103,11 @@
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#experience">Experience & Education</a>
+    <a href="#experience">Experience</a>
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
     <button id="theme-toggle">🌙</button>
-    <a href="Samukelo_CV.pdf" download class="btn">Download CV</a>
+    <a href="Samukelo S Makhanya CV .pdf" download class="btn">Download CV</a>
   </nav>
 </header>
 
@@ -125,7 +146,6 @@
         <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="80"/></svg>
         <h3>Excel</h3>
     </div>
-
     <div class="skill-card">
         <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="70"/></svg>
         <h3>HTML / CSS</h3>
@@ -142,7 +162,6 @@
         <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="110"/></svg>
         <h3>R Stats</h3>
     </div>
-
     <div class="skill-card">
         <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="40"/></svg>
         <h3>Data Analysis</h3>
@@ -236,6 +255,7 @@
     <p>📧 <a href="mailto:s.samza085@gmail.com" style="color:#FFC300;">s.samza085@gmail.com</a></p>
     <p>📞 063 757 1971</p>
     <p>🔗 <a href="https://linkedin.com/in/makhanya-samukeloa7b657244" target="_blank" style="color:#FFC300;">LinkedIn Profile</a></p>
+    <p>💻 <a href="https://github.com/Sam-makhanya" target="_blank" style="color:#FFC300;">GitHub: Sam-makhanya</a></p>
   </div>
 </section>
 
