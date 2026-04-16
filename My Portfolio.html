@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samukelo Solly Makhanya - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  /* Global */
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+  html { scroll-behavior: smooth; }
+  body { background:#1B2A49; color:#fff; line-height:1.6; transition: 0.3s; }
+  a { text-decoration:none; }
+
+  /* Header */
+  header { display:flex; justify-content:space-between; align-items:center; padding:15px 50px; position:sticky; top:0; background:#1B2A49; z-index:1000; }
+  header nav a { color:#fff; margin-left:25px; font-weight:600; transition:0.3s; }
+  header nav a:hover { color:#FFC300; }
+  header button { cursor:pointer; border:none; background:none; font-size:18px; margin-left:15px; }
+
+  /* Hero */
+  .hero { display:flex; align-items:center; justify-content:space-between; padding:100px 50px; background: linear-gradient(135deg,#1B2A49,#2A3A5F); border-radius:15px; margin:20px; }
+  .hero-text { flex:1; padding-right:20px; }
+  .hero-text h1 { font-size:60px; color:#FFC300; animation: fadeIn 1.5s ease-in-out; }
+  .hero-text p { font-size:22px; color:#fff; margin:20px 0; animation: fadeIn 2s ease-in-out; }
+  .hero img { width:350px; border-radius:50%; border:5px solid #FFC300; box-shadow:0 10px 20px rgba(0,0,0,0.3); }
+
+  .btn { background:#FFC300; color:#1B2A49; padding:12px 25px; font-weight:600; border-radius:5px; display:inline-block; transition:0.3s; }
+  .btn:hover { background:#e6b200; }
+
+  /* Sections */
+  section { padding:80px 50px; }
+  h2 { font-size:36px; margin-bottom:40px; text-align:center; color:#FFC300; }
+
+  /* Skills Section (Circular Style) */
+  .skills { display:flex; gap:30px; flex-wrap:wrap; justify-content:center; max-width: 1200px; margin: 0 auto; }
+  .skill-card { position:relative; width:140px; height:140px; border-radius:50%; background:#2A3A5F; display:flex; align-items:center; justify-content:center; box-shadow:0 5px 15px rgba(0,0,0,0.3); cursor:pointer; transition: transform 0.3s; }
+  .skill-card:hover { transform: scale(1.1); }
+  .skill-card h3 { position:absolute; text-align:center; color:#FFC300; font-size:12px; padding: 0 10px; font-weight: 600; z-index: 2; }
+  .skill-card svg { transform: rotate(-90deg); }
+
+  /* Timeline */
+  .timeline { position:relative; max-width:900px; margin:0 auto; }
+  .timeline::after { content:''; position:absolute; width:4px; background-color:#FFC300; top:0; bottom:0; left:50%; margin-left:-2px; }
+  .timeline-entry { padding:20px 40px; position:relative; width:50%; }
+  .timeline-entry.left { left:0; text-align: right; }
+  .timeline-entry.right { left:50%; }
+  .timeline-entry::after { content:''; position:absolute; width:20px; height:20px; right:-10px; background:#FFC300; border-radius:50%; top:20px; border:4px solid #1B2A49; }
+  .timeline-entry.right::after { left:-10px; }
+  .timeline-content { background: #2A3A5F; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+  .timeline-content h3 { color: #FFC300; font-size: 18px; margin-bottom: 5px; }
+  .timeline-content p { font-size: 14px; }
+
+  /* Certifications Grid */
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; max-width: 1100px; margin: 0 auto; }
+  .cert-card { background: rgba(42, 58, 95, 0.7); padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 195, 0, 0.3); transition: 0.3s; }
+  .cert-card:hover { border-color: #FFC300; background: rgba(42, 58, 95, 1); }
+  .cert-card h4 { color: #FFC300; font-size: 14px; margin-bottom: 5px; }
+  .cert-card p { font-size: 12px; opacity: 0.9; }
+
+  /* Contact */
+  #contact div { text-align: center; font-size: 18px; }
+
+  /* Footer */
+  footer { background:#1B2A49; color:#fff; text-align:center; padding:20px; border-top: 1px solid #2A3A5F; }
+
+  /* Animations */
+  @keyframes fadeIn { from { opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+  .hidden { opacity:0; transform:translateY(50px); transition: all 0.8s ease; }
+  .animate { opacity:1; transform:translateY(0); }
+
+  /* Light Mode */
+  body.light-mode { background:#f5f5f5; color:#1B2A49; }
+  body.light-mode header, body.light-mode footer { background:#f5f5f5; }
+  body.light-mode .timeline-content, body.light-mode .skill-card, body.light-mode .cert-card { background: #fff; border-color: #ccc; color: #1B2A49; }
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Samukelo Solly Makhanya</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience & Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle">🌙</button>
+    <a href="Samukelo_CV.pdf" download class="btn">Download CV</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I’m Samukelo</h1>
+    <p>Junior Data and Business Intelligence professional skilled in Power BI, SQL, Python, R, and AWS. Transforming complex datasets into actionable business insights.</p>
+    <a href="#contact" class="btn">Get In Touch</a>
+  </div>
+  <div>
+    <img src="file:///C:/Users/32036337/Downloads/My Personal%20portfolio/WhatsApp%20Image%202025-09-15%20at%2015.21.28.jpeg" 
+         alt="Samukelo Solly Makhanya">
+  </div>
+</section>
+
+<section id="about">
+  <h2>Professional Summary</h2>
+  <p style="max-width:900px; margin:0 auto; text-align:center;">Junior Data and Business Intelligence professional with strong experience in data analysis, reporting, and dashboard development. Skilled in Power BI, SQL, Python, R, and Excel, with a proven ability to support decision-making through data-driven reporting and performance analysis.</p>
+</section>
+
+<section id="skills">
+  <h2>Technical & Professional Skills</h2>
+  <div class="skills">
+    <div class="skill-card">
+      <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="30"/></svg>
+      <h3>Power BI</h3>
+    </div>
+    <div class="skill-card">
+      <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="50"/></svg>
+      <h3>SQL</h3>
+    </div>
+    <div class="skill-card">
+      <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="60"/></svg>
+      <h3>Python</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="80"/></svg>
+        <h3>Excel</h3>
+    </div>
+
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="70"/></svg>
+        <h3>HTML / CSS</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="100"/></svg>
+        <h3>JavaScript</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="90"/></svg>
+        <h3>Java / C++</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="110"/></svg>
+        <h3>R Stats</h3>
+    </div>
+
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="40"/></svg>
+        <h3>Data Analysis</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="45"/></svg>
+        <h3>Data Validation</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="20"/></svg>
+        <h3>Attention to Detail</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="30"/></svg>
+        <h3>Analytical Thinking</h3>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience & Education</h2>
+  <div class="timeline">
+    <div class="timeline-entry left">
+      <div class="timeline-content">
+        <h3>ICT Intern (Data/Business Analyst)</h3>
+        <p><strong>Dept of Employment & Labour</strong></p>
+        <p>Mar 2025 – Present</p>
+        <p>Developing Power BI dashboards, performing SQL extraction, and using Python and R for automated reporting.</p>
+      </div>
+    </div>
+    <div class="timeline-entry right">
+      <div class="timeline-content">
+        <h3>E-Learning Assistant</h3>
+        <p><strong>Walter Sisulu University</strong></p>
+        <p>Mar 2023 – Dec 2024</p>
+        <p>Supported reporting and analysis of academic performance data using system-generated insights.</p>
+      </div>
+    </div>
+    <div class="timeline-entry left">
+      <div class="timeline-content">
+        <h3>BSc Honours in Computer Science</h3>
+        <p><strong>Walter Sisulu University</strong></p>
+        <p>2024</p>
+      </div>
+    </div>
+    <div class="timeline-entry right">
+      <div class="timeline-content">
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p><strong>Walter Sisulu University</strong></p>
+        <p>2023</p>
+      </div>
+    </div>
+    <div class="timeline-entry left">
+      <div class="timeline-content">
+        <h3>Diesel Mechanic</h3>
+        <p><strong>Western Tvet College</strong></p>
+        <p>2018</p>
+      </div>
+    </div>
+    <div class="timeline-entry right">
+      <div class="timeline-content">
+        <h3>Grade 12 (Matric)</h3>
+        <p><strong>Chief Charlse Secondary School</strong></p>
+        <p>2017</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications & Training</h2>
+  <div class="cert-grid">
+    <div class="cert-card"><h4>Architecting Solutions on AWS</h4><p>AWS | 2026</p></div>
+    <div class="cert-card"><h4>Data Analysis & Visualization (Power BI)</h4><p>Microsoft | 2026</p></div>
+    <div class="cert-card"><h4>Data Analysis with Python</h4><p>IBM | 2026</p></div>
+    <div class="cert-card"><h4>Data Analysis with R Programming</h4><p>Google | 2026</p></div>
+    <div class="cert-card"><h4>Data Modeling in Power BI</h4><p>Microsoft | 2026</p></div>
+    <div class="cert-card"><h4>Extract, Transform & Load (ETL) in Power BI</h4><p>Microsoft | 2026</p></div>
+    <div class="cert-card"><h4>SAP Professional Fundamentals</h4><p>SAP | 2026</p></div>
+    <div class="cert-card"><h4>Preparing Data with Microsoft Excel</h4><p>Microsoft | 2026</p></div>
+    <div class="cert-card"><h4>Harnessing the Power of Power BI</h4><p>Microsoft | 2026</p></div>
+    <div class="cert-card"><h4>Data Analysis Fundamentals</h4><p>IBM | 2025</p></div>
+    <div class="cert-card"><h4>IT Audit & Cyber Security Academy</h4><p>iNkanyezi / Absa | 2024</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Details</h2>
+  <div>
+    <p>📍 Pretoria, Gauteng</p>
+    <p>📧 <a href="mailto:s.samza085@gmail.com" style="color:#FFC300;">s.samza085@gmail.com</a></p>
+    <p>📞 063 757 1971</p>
+    <p>🔗 <a href="https://linkedin.com/in/makhanya-samukeloa7b657244" target="_blank" style="color:#FFC300;">LinkedIn Profile</a></p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Samukelo Solly Makhanya | Junior Data and Business Intelligence Professional
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate');
+      }
+    });
+  }, { threshold:0.1 });
+
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.add('hidden');
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
