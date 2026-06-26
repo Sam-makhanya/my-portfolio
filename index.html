@@ -51,7 +51,8 @@
 
   /* Sections */
   section { padding:80px 50px; }
-  h2 { font-size:36px; margin-bottom:40px; text-align:center; color:#FFC300; }
+  h2 { font-size:36px; margin-bottom:10px; text-align:center; color:#FFC300; }
+  .section-subtitle { text-align:center; color:#fff; font-size:20px; margin-bottom:40px; font-weight:300; opacity:0.9; }
 
   /* Skills Section (Circular Style) */
   .skills { display:flex; gap:30px; flex-wrap:wrap; justify-content:center; max-width: 1200px; margin: 0 auto; }
@@ -72,12 +73,12 @@
   .timeline-content h3 { color: #FFC300; font-size: 18px; margin-bottom: 5px; }
   .timeline-content p { font-size: 14px; }
 
-  /* Certifications Grid */
-  .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; max-width: 1100px; margin: 0 auto; }
-  .cert-card { background: rgba(42, 58, 95, 0.7); padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 195, 0, 0.3); transition: 0.3s; }
+  /* Certifications & Project Grid */
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; max-width: 1100px; margin: 0 auto 50px auto; }
+  .cert-card { background: rgba(42, 58, 95, 0.7); padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 195, 0, 0.3); display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
   .cert-card:hover { border-color: #FFC300; background: rgba(42, 58, 95, 1); }
   .cert-card h4 { color: #FFC300; font-size: 14px; margin-bottom: 5px; }
-  .cert-card p { font-size: 12px; opacity: 0.9; }
+  .cert-card p { font-size: 12px; opacity: 0.9; margin-bottom: 15px; }
 
   /* Contact */
   #contact div { text-align: center; font-size: 18px; }
@@ -94,6 +95,7 @@
   body.light-mode { background:#f5f5f5; color:#1B2A49; }
   body.light-mode header, body.light-mode footer { background:#f5f5f5; }
   body.light-mode .timeline-content, body.light-mode .skill-card, body.light-mode .cert-card { background: #fff; border-color: #ccc; color: #1B2A49; }
+  body.light-mode .section-subtitle { color: #1B2A49; }
 </style>
 </head>
 <body>
@@ -115,8 +117,7 @@
 <section class="hero">
   <div class="hero-text">
     <h1>Hi, I’m Samukelo</h1>
-    <p>Data Scientist | Data Analyst | BI & Analytics Specialist | Full-Stack Developer |
-Junior Data & BI Professional | Power BI, SQL, Python, R, AWS | Transforming Complex Datasets into Actionable Insights.</p>
+    <p>Data Scientist | Data Analyst | BI & Analytics Specialist | Full-Stack Developer | Junior Data & BI Professional | Power BI, SQL, Python, R, AWS | Transforming Complex Datasets into Actionable Insights | HTML, CSS, JAVASCRIPT | Web Development |.</p>
     <a href="#contact" class="btn">Get In Touch</a>
   </div>
   <div>
@@ -126,13 +127,7 @@ Junior Data & BI Professional | Power BI, SQL, Python, R, AWS | Transforming Com
 
 <section id="about">
   <h2>Professional Summary</h2>
-  <p style="max-width:900px; margin:0 auto; text-align:center;">Highly versatile and analytical Computer Science Honours graduate (NQF Level 8) with a comprehensive technical
-background spanning machine learning engineering, full-stack application development, and business intelligence (BI)
-frameworks. Proven track record architecting data-driven automation engines, constructing optimized ETL/data
-engineering pipelines, and developing predictive ML models over complex enterprise datasets. Currently embedded at the
-Compensation Fund (Department of Employment & Labour), translating raw transactional data layers into actionable
-insights and strategic reporting solutions. Proficient across Python, SQL, R, and Power BI; recognized for pairing
-technical execution with clear stakeholder communication in fast-paced agile environments.</p>
+  <p style="max-width:900px; margin:0 auto; text-align:center;">Highly versatile and analytical Computer Science Honours graduate (NQF Level 8) with a comprehensive technical background spanning machine learning engineering, full-stack application development, and business intelligence (BI) frameworks. Proven track record architecting data-driven automation engines, constructing optimized ETL/data engineering pipelines, and developing predictive ML models over complex enterprise datasets. Currently embedded at the Compensation Fund (Department of Employment & Labour), translating raw transactional data layers into actionable insights and strategic reporting solutions. Proficient across Python, SQL, R, and Power BI; recognized for pairing technical execution with clear stakeholder communication in fast-paced agile environments.</p>
 </section>
 
 <section id="skills">
@@ -161,6 +156,22 @@ technical execution with clear stakeholder communication in fast-paced agile env
     <div class="skill-card">
         <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="100"/></svg>
         <h3>JavaScript</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="40"/></svg>
+        <h3>React / Vue.js</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="40"/></svg>
+        <h3>Node.js</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="35"/></svg>
+        <h3>Responsive UI</h3>
+    </div>
+    <div class="skill-card">
+        <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="45"/></svg>
+        <h3>API Integration</h3>
     </div>
     <div class="skill-card">
         <svg width="120" height="120"><circle cx="60" cy="60" r="50" stroke="#FFC300" stroke-width="8" fill="transparent" stroke-dasharray="314" stroke-dashoffset="90"/></svg>
@@ -258,16 +269,15 @@ technical execution with clear stakeholder communication in fast-paced agile env
 
 <section id="projects">
   <h2>Featured Projects</h2>
-
+  
+  <h3 class="section-subtitle">Data Analytics & Engineering Projects</h3>
   <div class="cert-grid">
-
     <div class="cert-card">
       <h4>Financial Anomaly Analytics Suite</h4>
       <p>
         Built an end-to-end analytics and machine learning pipeline using Python and SQL to analyze 500,000+ financial transactions.
         Performed data validation, feature engineering, anomaly detection, fraud-risk analysis, and predictive modeling.
       </p>
-      <br>
       <a href="https://github.com/Sam-makhanya/financial-anomaly-analytics-suite"
          target="_blank"
          class="btn">View Project</a>
@@ -279,36 +289,63 @@ technical execution with clear stakeholder communication in fast-paced agile env
         Developed a governance, risk, and compliance analytics platform using Python, SQL, and business intelligence principles.
         Automated risk scoring, control monitoring, and compliance reporting for decision-making support.
       </p>
-      <br>
       <a href="https://github.com/Sam-makhanya/governance-risk-engine"
          target="_blank"
          class="btn">View Project</a>
     </div>
+  </div>
 
+  <h3 class="section-subtitle">Web Site Development Projects</h3>
+  <div class="cert-grid">
     <div class="cert-card">
-      <h4>Loan Shack</h4>
+      <h4>Miss J Platform</h4>
       <p>
-        Designed and developed a loan management system for handling customer applications, loan approvals,
-        repayments, and account management. Built with modern web technologies and database integration.
+        A bespoke web application built to deliver seamless interactive client workflows, responsive layout layers, and modern UI capabilities.
       </p>
-      <br>
-      <a href="https://github.com/Sam-makhanya/loan-shack"
+      <a href="https://sam-makhanya.github.io/Miss-J/"
          target="_blank"
-         class="btn">View Project</a>
+         class="btn">Live Project</a>
     </div>
 
     <div class="cert-card">
-      <h4>Loan Shack Admin Portal</h4>
+      <h4>Samukelo Tech Production</h4>
       <p>
-        Developed an administrative dashboard for managing users, loan applications,
-        repayments, approvals, and reporting. Includes role-based access and operational oversight features.
+        Corporate-grade custom web presence architected for optimized load speeds, mobile responsiveness, and intuitive interface interactions.
       </p>
-      <br>
-      <a href="https://github.com/Sam-makhanya/loan-shack-Admin"
+      <a href="https://samukelotech.co.za/"
          target="_blank"
-         class="btn">View Project</a>
+         class="btn">Live Project</a>
     </div>
 
+    <div class="cert-card">
+      <h4>PatTheeBaker Sweet Treats</h4>
+      <p>
+        Interactive web experience utilizing dynamic product display layouts, cross-browser CSS styling sheets, and user-centric frontend workflows.
+      </p>
+      <a href="https://sam-makhanya.github.io/-PatTheeBaker-Sweet-Treats/"
+         target="_blank"
+         class="btn">Live Project</a>
+    </div>
+
+    <div class="cert-card">
+      <h4>Mazenge Metal App</h4>
+      <p>
+        Industrial profile presentation layout engineered with strict visual hierarchies, responsive grid containers, and clear call-to-action systems.
+      </p>
+      <a href="https://sam-makhanya.github.io/Mazenge-Metal/"
+         target="_blank"
+         class="btn">Live Project</a>
+    </div>
+
+    <div class="cert-card">
+      <h4>Gcinile’s Salon Engine</h4>
+      <p>
+        Custom client-facing booking layout configured for fluid user journeys, media query display adaptation, and pristine frontend scripting stability.
+      </p>
+      <a href="https://sam-makhanya.github.io/gcinile-s-salon/"
+         target="_blank"
+         class="btn">Live Project</a>
+    </div>
   </div>
 </section>
 
@@ -326,8 +363,6 @@ technical execution with clear stakeholder communication in fast-paced agile env
 <footer>
   &copy; 2026 Samukelo Solly Makhanya | Junior Data and Business Intelligence Professional
 </footer>
-
-
 
 <script>
   const toggleBtn = document.getElementById('theme-toggle');
